@@ -15,12 +15,12 @@ const messages = [
     variant: 'rose' as const,
   },
   {
-    message: "Birthdays are just annual reminders that you're a legend",
+    message: "Birthdays are just annual reminders that you're a legend!!!",
     subMessage: "This is your reminder.",
     variant: 'wine' as const,
   },
   {
-    message: "May your year be as beautiful as your heart 💕",
+    message: "May your birth day be noice!! ",
     subMessage: "And may your coffee always be the perfect temperature.",
     variant: 'gold' as const,
   },

@@ -42,7 +42,71 @@ const tracks = [
     youtubeId: 'JRWox-i6aAk',
     color: '#000080',
   },
+  {
+    title: 'West Coast',
+    artist: 'Lana Del Rey',
+    album: 'Ultraviolence',
+    youtubeId: 'p7ZsO3Zjr4M',
+    color: '#2A2F36',
+  },
+  {
+    title: 'Ride',
+    artist: 'Lana Del Rey',
+    album: 'Born to Die: The Paradise Edition',
+    youtubeId: 'ZLrLk5_QbpA',
+    color: '#556B2F',
+  },
+  {
+    title: 'Doin’ Time',
+    artist: 'Lana Del Rey',
+    album: 'Norman F****ing Rockwell!',
+    youtubeId: '9DOcG2P0_7M',
+    color: '#708090',
+  },
+  {
+    title: 'Brooklyn Baby',
+    artist: 'Lana Del Rey',
+    album: 'Ultraviolence',
+    youtubeId: 'RRyRxDB-cz0',
+    color: '#8FBC8F',
+  },
+  {
+    title: 'Love',
+    artist: 'Lana Del Rey',
+    album: 'Lust for Life',
+    youtubeId: 'Lp9mYvFjG8U',
+    color: '#FF69B4',
+  },
+  {
+    title: 'High By the Beach',
+    artist: 'Lana Del Rey',
+    album: 'Honeymoon',
+    youtubeId: 'Z‐tq6vfqfKQ',
+    color: '#4682B4',
+  },
+  {
+    title: 'Chemtrails Over the Country Club',
+    artist: 'Lana Del Rey',
+    album: 'Chemtrails Over the Country Club',
+    youtubeId: '1N9av5jO77E',
+    color: '#A9A9A9',
+  },
+  {
+    title: 'Happiness is a Butterfly',
+    artist: 'Lana Del Rey',
+    album: 'Lust for Life',
+    youtubeId: 'k6ywg6sSqr0',
+    color: '#FFB6C1',
+  },
+  {
+    title: 'Venice Bitch',
+    artist: 'Lana Del Rey',
+    album: 'Norman F****ing Rockwell!',
+    youtubeId: 'H6u0VBqNBQ8',
+    color: '#6A5ACD',
+  },
 ];
+
 
 export interface MusicSectionHandle {
   playMusic: () => void;

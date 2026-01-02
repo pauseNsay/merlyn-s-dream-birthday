@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Lana Del Rey inspired palette - dreamy, romantic, vintage */
+    --background: 240 30% 8%;
+    --foreground: 35 25% 92%;
+
+    --card: 240 25% 12%;
+    --card-foreground: 35 25% 92%;
+
+    --popover: 240 25% 12%;
+    --popover-foreground: 35 25% 92%;
+
+    /* Deep wine/burgundy - romantic and vintage */
+    --primary: 350 60% 45%;
+    --primary-foreground: 35 25% 95%;
+
+    /* Champagne gold - glamorous */
+    --secondary: 42 65% 65%;
+    --secondary-foreground: 240 30% 10%;
+
+    /* Soft rose pink */
+    --muted: 350 30% 25%;
+    --muted-foreground: 35 20% 70%;
+
+    /* Dusty rose accent */
+    --accent: 340 45% 55%;
+    --accent-foreground: 35 25% 95%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 350 20% 25%;
+    --input: 350 20% 25%;
+    --ring: 42 65% 65%;
+
+    --radius: 0.75rem;
+
+    /* Custom colors for the party */
+    --gold: 42 85% 55%;
+    --rose: 350 70% 65%;
+    --blush: 350 50% 80%;
+    --midnight: 240 35% 12%;
+    --champagne: 40 60% 85%;
+    --wine: 350 65% 35%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(180deg, hsl(240 30% 5%) 0%, hsl(350 40% 15%) 50%, hsl(240 30% 8%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(42 85% 55%) 0%, hsl(35 75% 45%) 100%);
+    --gradient-romantic: linear-gradient(180deg, hsl(350 60% 45%) 0%, hsl(340 45% 55%) 100%);
+    --gradient-shimmer: linear-gradient(90deg, transparent 0%, hsl(42 85% 75% / 0.3) 50%, transparent 100%);
+
+    /* Shadows */
+    --shadow-glow: 0 0 60px hsl(350 60% 45% / 0.4);
+    --shadow-gold: 0 0 40px hsl(42 85% 55% / 0.5);
+    --shadow-soft: 0 10px 40px hsl(240 30% 5% / 0.5);
+  }
+
+  .dark {
+    --background: 240 30% 8%;
+    --foreground: 35 25% 92%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(42 85% 65%) 0%, hsl(35 75% 55%) 50%, hsl(42 85% 75%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-romantic {
+    background: linear-gradient(135deg, hsl(350 70% 70%) 0%, hsl(340 60% 60%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 30px hsl(42 85% 55% / 0.4), 0 0 60px hsl(42 85% 55% / 0.2);
+  }
+
+  .glow-rose {
+    box-shadow: 0 0 30px hsl(350 70% 65% / 0.4), 0 0 60px hsl(350 70% 65% / 0.2);
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent 0%, hsl(42 85% 75% / 0.1) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-slow {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 2s ease-in-out infinite;
+  }
+
+  .animate-wiggle {
+    animation: wiggle 0.5s ease-in-out;
+  }
+
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  .animate-spin-slower {
+    animation: spin 15s linear infinite;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 1.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 1s ease-out forwards;
+  }
+
+  .animate-confetti {
+    animation: confetti-fall 4s linear infinite;
+  }
+
+  .animate-sparkle {
+    animation: sparkle 2s ease-in-out infinite;
+  }
+
+  .animate-heartbeat {
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0.3;
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% { 
+    opacity: 0.3; 
+    transform: scale(0.8); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: scale(1.2); 
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+  75% { transform: scale(1.1); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.7);
+}
